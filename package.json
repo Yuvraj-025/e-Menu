@@ -4,7 +4,6 @@
   "description": "Welcome to **Cafe Menu** project! 🎉   A simple and modern website for a **Cafe / Restaurant** where users can:   - 📖 View the menu   - 📅 Make table reservations   - 🛒 Place online orders",
   "main": "admin.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
   "keywords": [],
