@@ -1,15 +1,19 @@
 const express = require("express");
 const cors = require("cors");
 const fs = require("fs");
-
+const path = require("path");
 
 const app = express();
-const PORT = 3000;
-const MENU_FILE = "./menu.json";
+const MENU_FILE = path.join(__dirname, "menu.json");
 
 app.use(cors());
 app.use(express.json());
 app.use(express.static(".")); 
+
+// ✅ Root route (so "/" works)
+app.get("/", (req, res) => {
+  res.send("🚀 Express app deployed successfully on Vercel!");
+});
 
 app.get("/api/menu", (req, res) => {
   fs.readFile(MENU_FILE, "utf8", (err, data) => {
@@ -25,4 +29,6 @@ app.post("/api/menu", (req, res) => {
   });
 });
 
-app.listen(PORT, () => console.log(`Server running at http://localhost:${PORT}`));
+// ❌ REMOVE app.listen()
+// ✅ Instead, export the app:
+module.exports = app;
