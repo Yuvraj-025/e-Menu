@@ -8,7 +8,7 @@ const MENU_FILE = path.join(__dirname, "menu.json");
 
 app.use(cors());
 app.use(express.json());
-app.use(express.static(path.join(__dirname, "public"))); // ✅ serve static frontend
+app.use(express.static(__dirname));
 
 app.get("/api/menu", (req, res) => {
   fs.readFile(MENU_FILE, "utf8", (err, data) => {
@@ -23,5 +23,8 @@ app.post("/api/menu", (req, res) => {
     res.send({ message: "Menu updated successfully" });
   });
 });
-
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "index.html"));
+});
 module.exports = app;
+
