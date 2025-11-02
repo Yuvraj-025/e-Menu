@@ -1,90 +1,84 @@
-# ☕ Cafe Menu  
+Digital Menu Management System
 
-Welcome to **Cafe Menu** project! 🎉  
-A simple and modern website for a **Cafe / Restaurant** where users can:  
-- 📖 View the menu  
-- 📅 Make table reservations  
-- 🛒 Place online orders  
+The Café Menu Management System is a full-stack web application that allows users to browse, filter, and order café items while providing an admin interface for managing the menu in real-time.
+Built using HTML, CSS, JavaScript (Frontend), and Node.js with Express (Backend), it ensures seamless user interaction and live menu management via a local menu.json file.
 
+Features - 
 
-## ✨ Features  
+Dynamic Menu Display: Fetches and displays items from menu.json dynamically.
 
-✅ Fully responsive design (works on 📱 mobile, 💻 desktop, and 🖥️ tablet)  
-✅ Interactive menu with categories 🍔🥤🍰  
-✅ Smooth animations ✨  
-✅ Reservation form with basic validation 📝  
-✅ Online order form 🚀  
-✅ Clean and modern navigation 🧭  
+Category Filters: Filter menu items by categories.
 
----
+Cart System: Add items to cart, view quantities, and total price.
 
-## 🛠️ Tech Stack  
+Admin Panel: Add, edit, or delete menu items directly, updating the menu.json file in real time.
 
-- 🌐 **HTML5** → structure of the website  
-- 🎨 **CSS3** → styling, layout, animations  
-- ⚡ **JavaScript** → interactivity & form validation  
+Toast Notifications: Smooth notifications for user actions (e.g., adding to cart).
 
----
+Responsive Design: Works on desktops, tablets, and mobile devices.
 
-## 📂 Project Structure  
+Tech Stack
 
-/assets → images, icons, demo gifs
+Frontend: HTML5, CSS3, JavaScript (Vanilla JS)
 
-/font → custom fonts
+Backend: Node.js + Express.js
 
-index.html → main file
+Data Storage: JSON file (menu.json)
 
-style.css → styling
+Server: Localhost via Node.js
 
-script.js → functionality
+Project Structure
+main/
+│
+├── assets/              # Images and icons
+├── menu.json            # Stores all menu data
+├── index.html           # Main user interface
+├── admin.html           # Admin panel for managing menu
+├── script.js            # Handles frontend logic and cart system
+├── admin.js             # Handles admin functions (CRUD)
+├── server.js            # Express backend server
+├── package.json         # Node dependencies and scripts
+└── README.md            # Documentation
 
-README.md → documentation
+Installation & Setup
+1. Install Node.js
 
----
+If not installed, download and install Node.js from: https://nodejs.org/
 
-## 🚀 Installation
+2. Install dependencies
 
-To run this project locally:
+Open the project folder in your terminal and run:
 
-1. Clone the repository:
-   ```bash
-   https://github.com/abolfazl-shadrouh/cafe-menu.git
+npm install express cors body-parser
 
-2. Open the project folder:
-  cd cafe-menu
+3. Start the server
+node server.js
 
-3. Run the project by opening index.html in your browser.
+Server runs on http://localhost:3000
 
----
+4. Open the app
 
-## 🚧 Future Improvements
+Open index.html in your browser (use Live Server in VS Code for best results).
 
-🔹 Add a backend (Node.js / Django / Flask)
+To access admin panel, open admin.html.
 
-🔹 Database for orders & reservations (MySQL / MongoDB)
+User Flow
+Customer Flow
 
-🔹 Online payment integration 💳
+Launch index.html to view the café menu.
 
-🔹 Multi-language support 🌍
+Use category filter buttons to view Coffee, Breakfast, or Restaurant items.
 
-🔹 Admin dashboard for managing orders 👨‍💼
+Click Add to Cart to add an item.
 
----
+View total items and amount in the cart panel.
 
-## 👨‍💻 About Me
+Admin Flow
 
-Made with ❤️ by Abolfazl Shadrouh
+Open admin.html to manage the menu.
 
-💻 Full-Stack Developer
+Add new dishes by entering details (name, category, price, image URL, etc.).
 
-🎓 CS50x Student
+Edit or delete existing items as needed.
 
-🌟 Passionate about web development & open-source
-
----
-
-## 📜 License
-
-This project is under the MIT License ✅
-
-Feel free to use, share, and improve it with proper credit 🙌
+Changes are saved directly to menu.json and reflected instantly in the user menu.
