@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Coffee Shop</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="Coffee Shop">
+  <meta name="description" content="Discover our cafe & restaurant menu with fresh coffee, delicious meals, online ordering, and table reservations in a cozy atmosphere.">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/WebP" href="assets/logo.WebP"/>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.11/dist/lenis.css">
+  
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="hero-section">
+    <nav aria-label="Primary">
+      <div class="logo">Coffee Shop</div>
+      <ul>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li class="cart-nav">
+            <button 
+                id="cart-toggle" 
+                aria-expanded="false" 
+                aria-controls="cart-panel" 
+                title="Open cart"
+            >
+                <i class="fal fa-shopping-cart cart" aria-hidden="true"></i>
+                <span class="cart-count" aria-live="polite">0</span>
+            </button>
+            <div 
+                class="cart-dropdown" 
+                id="cart-panel" 
+                role="dialog" 
+                aria-label="Shopping Cart"
+            >
+                <h4>Your Cart</h4>
+                <ul class="cart-list"></ul>
+                <p class="cart-empty">Cart is empty</p>
+                <div class="cart-total">Total: $0.00</div>
+                <div class="cart-actions">
+                <button class="cart-clear" aria-label="Clear cart">Clear</button>
+                <button class="cart-checkout" aria-label="Checkout">Checkout</button>
+                </div>
+            </div>
+            </li>
+      </ul>
+    </nav>
+
+    <div class="hero-text">
+      <h1>Artisanal Coffee & Fresh Bites</h1>
+      <p>Your daily dose of perfection, brewed with passion.</p>
+    </div>
+  </header>
+
+    <main>
+        <section id="menu" class="menu-section">
+            <h2 class="animate-on-scroll">Our Menu</h2>
+
+            <div class="menu-filters animate-on-scroll">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="coffee">Coffee</button>
+                <button class="filter-btn" data-filter="breakfast">Breakfast</button>
+                <button class="filter-btn" data-filter="restaurant">Restaurant</button>
+            </div>
+
+            <div class="menu-container"></div>
+        </section>
+   <footer id="contact" class="site-footer animate-on-scroll">
+    <div class="footer-content">
+      <h2 class="logo">Coffee Shop</h2>
+      <p>The address of the cafe in question is placed here</p>
+
+      <div class="social-links">
+            <a href="" target="_blank" class="social-btn"><i class="fab fa-instagram"></i></a>
+            <a href="" target="_blank" class="social-btn"><i class="fab fa-telegram-plane"></i></a>
+            <a href="" target="_blank" class="social-btn"><i class="fab fa-facebook-f"></i></a>
+            <a href="" target="_blank" class="social-btn"><i class="fab fa-twitter"></i></a>
+            <a href="" target="_blank" class="social-btn"><i class="fas fa-globe"></i></a>
+        </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="https://unpkg.com/lenis@1.3.11/dist/lenis.min.js"></script> 
+</body>
+</html>
+
+
