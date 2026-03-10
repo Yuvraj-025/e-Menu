@@ -1,3 +1,6 @@
+<p align="center">
+  <img src="images/banner.png" alt="Digital Menu Management System Banner" width="100%">
+</p>
 # Digital Menu Management System
 
 The Digital Menu Management System is a full-stack web application that allows customers to browse café items, filter menu categories, and manage orders while providing an administrative interface for real-time menu management.
@@ -167,7 +170,9 @@ cafe-menu-main
 ---
 
 ## System Workflow
-
+<p align="center">
+  <img src="images/arch.png" alt="System Architecture" width="800">
+</p>
 ```
 1. The Express backend server reads and writes data from menu.json.
 2. The frontend loads menu items dynamically using the fetch() API.
