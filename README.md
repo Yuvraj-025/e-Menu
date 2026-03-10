@@ -1,53 +1,88 @@
-# **Digital Menu Management System**
+# Digital Menu Management System
+
+The Digital Menu Management System is a full-stack web application that allows customers to browse café items, filter menu categories, and manage orders while providing an administrative interface for real-time menu management.
+
+The system is built using HTML, CSS, and JavaScript for the frontend, and Node.js with Express.js for the backend. Menu data is stored locally in a JSON file and dynamically updated through the admin panel.
 
 ---
 
-The **Café Menu Management System** is a full-stack web application that allows users to browse, filter, and order café items while providing an **admin interface** for managing the menu in real time.  
-Built using **HTML**, **CSS**, **JavaScript (Frontend)**, and **Node.js with Express (Backend)**, it ensures seamless user interaction and live menu management via a local `menu.json` file.
+## Screenshots
 
+| Interface | Interface | Interface |
+|-----------|-----------|-----------|
 | ![](1.png) | ![](2.png) | ![](3.png) |
 
+---
+
+## Overview
+
+This project demonstrates a simple yet effective implementation of a digital menu system where customers can explore available food items while administrators can manage menu content without modifying the source code.
+
+The application supports dynamic menu loading, cart functionality, category filtering, and live updates through a backend service.
 
 ---
 
-## **Features**
+## Key Features
+
+Dynamic Menu Rendering  
+Menu items are fetched from `menu.json` and rendered dynamically on the frontend.
+
+Category-Based Filtering  
+Users can filter menu items by category such as Coffee, Breakfast, or Restaurant items.
+
+Cart System  
+Customers can add items to the cart, view quantities, and track the total order amount.
+
+Admin Management Panel  
+Administrators can add, edit, or delete menu items through a dedicated admin interface.
+
+Real-Time Menu Updates  
+Changes made by the admin panel update the `menu.json` file and are reflected instantly.
+
+Responsive User Interface  
+The layout adapts to desktop, tablet, and mobile screen sizes.
+
+Toast Notifications  
+User actions such as adding items to the cart are confirmed through notification messages.
 
 ---
 
-- **Dynamic Menu Display:** Fetches and displays items from `menu.json` dynamically.  
-- **Category Filters:** Filter menu items by categories.  
-- **Cart System:** Add items to cart, view quantities, and total price.  
-- **Admin Panel:** Add, edit, or delete menu items directly, updating the `menu.json` file in real time.  
-- **Toast Notifications:** Smooth notifications for user actions (e.g., adding to cart).  
-- **Responsive Design:** Works on desktops, tablets, and mobile devices.
+## Technology Stack
+
+Frontend
+
+- HTML5
+- CSS3
+- JavaScript (Vanilla JS)
+
+Backend
+
+- Node.js
+- Express.js
+
+Data Storage
+
+- JSON file (`menu.json`)
+
+Server
+
+- Localhost Node.js server
 
 ---
 
-## **Tech Stack**
+## Installation and Setup
+
+### 1. Install Node.js
+
+Download and install Node.js from the official website:
+
+https://nodejs.org/
 
 ---
 
-- **Frontend:** HTML5, CSS3, JavaScript (Vanilla JS)  
-- **Backend:** Node.js + Express.js  
-- **Data Storage:** JSON file (`menu.json`)  
-- **Server:** Localhost via Node.js  
+### 2. Install Project Dependencies
 
----
-
-## **Installation & Setup**
-
----
-
-### **1. Install Node.js**
-
-If not installed, download and install Node.js from:  
-[https://nodejs.org/](https://nodejs.org/)
-
----
-
-### **2. Install Dependencies**
-
-Open the project folder in your terminal and run:
+Open the project folder in the terminal and run:
 
 ```bash
 npm install express cors body-parser
@@ -55,79 +90,115 @@ npm install express cors body-parser
 
 ---
 
-### **3. Start the Server**
+### 3. Start the Backend Server
 
-Run the command:
+Run the following command:
 
 ```bash
 node server.js
 ```
 
-Server will run at:  
-**http://localhost:3000**
+The server will start at:
 
----
-
-### **4. Open the Application**
-
-Open `index.html` in your browser (recommended via **Live Server** in VS Code).
-
-To access the **admin panel**, open `admin.html`.
-
----
-
-## **User Flow**
-
----
-
-### **Customer Flow**
-
-```bash
-1. Launch index.html to view the café menu.
-2. Use category filter buttons to view Coffee, Breakfast, or Restaurant items.
-3. Click "Add to Cart" to add an item.
-4. View total items and amount in the cart panel.
+```
+http://localhost:3000
 ```
 
 ---
 
-### **Admin Flow**
+### 4. Open the Application
 
-```bash
-1. Open admin.html to manage the menu.
-2. Add new dishes by entering details (name, category, price, image URL, etc.).
-3. Edit or delete existing items as needed.
-4. Changes are saved directly to menu.json and reflected instantly in the user menu.
+Open the main customer interface:
+
+```
+index.html
+```
+
+To access the administrative interface:
+
+```
+admin.html
+```
+
+Using the **Live Server extension in VS Code** is recommended for smoother development.
+
+---
+
+## User Workflow
+
+### Customer Workflow
+
+```
+1. Open index.html to view the digital café menu.
+2. Use category filters to browse specific types of items.
+3. Select "Add to Cart" to include items in the cart.
+4. View the cart panel to track item quantities and total price.
 ```
 
 ---
 
-## **Project Structure**
+### Administrator Workflow
+
+```
+1. Open admin.html to access the admin panel.
+2. Add new menu items by providing item details.
+3. Edit or remove existing menu entries.
+4. Updates are saved directly to menu.json.
+5. The customer interface automatically reflects the updated menu.
+```
 
 ---
 
-```bash
-cafe-menu-main/
+## Project Structure
+
+```
+cafe-menu-main
 │
-├── index.html           # Customer-facing interface
-├── admin.html           # Admin management interface
-├── menu.json            # Stores all menu data
-├── script.js            # Handles menu + cart functionality
-├── admin.js             # Handles admin-side CRUD operations
-├── server.js            # Express backend server
-├── style.css            # Main stylesheet
-└── README.md            # Project documentation
+├── index.html        # Customer-facing menu interface
+├── admin.html        # Admin control panel
+├── menu.json         # Menu data storage
+├── script.js         # Frontend logic for menu and cart
+├── admin.js          # Admin CRUD operations
+├── server.js         # Express.js backend server
+├── style.css         # Application styling
+└── README.md         # Project documentation
 ```
 
 ---
 
-## **How It Works**
+## System Workflow
+
+```
+1. The Express backend server reads and writes data from menu.json.
+2. The frontend loads menu items dynamically using the fetch() API.
+3. The admin panel sends requests to the backend to modify menu data.
+4. Updated data is saved to menu.json.
+5. The user interface displays the latest menu items automatically.
+```
 
 ---
 
-```bash
-1. The backend (server.js) runs an Express server that reads and writes to menu.json.
-2. The frontend (index.html) dynamically loads menu items using JavaScript’s fetch() API.
-3. The admin panel (admin.html) sends update requests to the backend, modifying the menu.json file in real time.
-4. Users see updated menu items without needing to refresh the system manually.
-```
+## Future Improvements
+
+Possible enhancements for the system include:
+
+- User authentication for administrators
+- Database integration (MongoDB or PostgreSQL)
+- Order checkout system
+- Payment gateway integration
+- Deployment to cloud platforms
+
+---
+
+## License
+
+This project is intended for educational and development purposes.
+
+---
+
+## Author
+
+Yuvraj Singh
+
+GitHub Profile  
+https://github.com/Yuvraj-025
