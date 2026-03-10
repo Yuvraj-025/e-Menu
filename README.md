@@ -5,6 +5,9 @@
 The **Café Menu Management System** is a full-stack web application that allows users to browse, filter, and order café items while providing an **admin interface** for managing the menu in real time.  
 Built using **HTML**, **CSS**, **JavaScript (Frontend)**, and **Node.js with Express (Backend)**, it ensures seamless user interaction and live menu management via a local `menu.json` file.
 
+| ![](1.jpg) | ![](2.jpg) | ![](3.jpg) |
+
+
 ---
 
 ## **Features**
