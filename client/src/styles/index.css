@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lora:ital,wght@0,400;0,500;1,400&display=swap');
+@import url('https://pro.fontawesome.com/releases/v5.10.0/css/all.css');
+
+:root {
+  --primary-color: #f5f5dc;
+  --secondary-color: #6f4e37;
+  --accent-color: #c8a064;
+  --text-color: #333;
+  --bg-color: #fff;
+  --card-bg: #fff;
+  --border-color: #eee;
+  --header-font: 'Playfair Display', serif;
+  --body-font: 'Lora', serif;
+}
+
+* {  
+  box-sizing: border-box; 
+  margin: 0; 
+  padding: 0; 
+}
+
+html { 
+  scroll-behavior: smooth; 
+}
+
+body {
+  font-family: var(--body-font);
+  color: var(--text-color);
+  background: var(--bg-color);
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--header-font);
+}
+
+.animate-on-scroll { 
+  opacity: 0;
+  transform: translateY(24px); 
+  transition: opacity .6s ease-out, transform .6s ease-out; 
+}
+
+.animate-on-scroll.is-visible { 
+  opacity: 1; 
+  transform: translateY(0); 
+}
+
+/* Toast */
+.toast {
+  position: fixed; 
+  bottom: 30px; 
+  right: -300px;
+  background: var(--secondary-color); 
+  color: var(--bg-color);
+  padding: 12px 18px; 
+  border-radius: 8px;
+  transition: all .5s ease; 
+  z-index: 2000;
+}
+
+.toast.show { 
+  right: 30px; 
+}
+
+/* Base button styles */
+.btn {
+  font-family: var(--body-font); 
+  font-weight: 500;
+  background: var(--secondary-color); 
+  color: var(--primary-color);
+  border: none; 
+  padding: .55rem 1.05rem;
+  border-radius: 999px; 
+  cursor: pointer;
+  transition: transform .15s, background .2s;
+  display: inline-flex; 
+  align-items: center; 
+  justify-content: center;
+}
+
+.btn:hover { 
+  background: #543c2b; 
+  transform: scale(1.05); 
+}
+
+.btn:active { 
+  transform: scale(0.97); 
+}
+
+.btn-primary {
+  background: var(--accent-color);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: #b58d51;
+}
+
+main {
+  min-height: calc(100vh - 200px); /* rough footer height adjustment */
+}

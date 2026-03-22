@@ -1,0 +1,54 @@
+.site-footer {
+  background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
+  color: var(--primary-color);
+  text-align: center;
+  padding: 4rem 5% 2.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.site-footer .logo {
+  font-family: var(--header-font);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  letter-spacing: 1.5px;
+}
+
+.site-footer p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: rgba(255,255,255,0.9);
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.social-btn {
+  text-decoration: none;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  color: var(--primary-color);
+  background: rgba(255,255,255,0.12);
+  transition: all .4s ease;
+}
+
+.social-btn:hover {
+  background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
+  transform: scale(1.15) rotate(6deg);
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+.site-footer .copyright {
+  margin-top: 1.5rem;
+  font-size: .9rem;
+  color: rgba(255,255,255,0.75);
+}
